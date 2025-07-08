@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Membre - Lex&Struct</title>
+    <meta name="description" content="Espace membre de Lex&Struct. Accédez à vos cours et ressources.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0c2340',
+                        secondary: '#f4f1ea',
+                        accent: '#1e40af',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-secondary text-primary">
+    <!-- Header -->
+    <header class="bg-primary text-secondary sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="Lex&Struct Logo" class="h-10">
+                <span class="text-xl font-bold">Lex&Struct</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-accent transition">Accueil</a>
+                <a href="#" class="hover:text-accent transition">Formations</a>
+                <a href="ebook.html" class="hover:text-accent transition">Boutique</a>
+                <a href="#" class="hover:text-accent transition">Blog</a>
+                <a href="index.html#about" class="hover:text-accent transition">À propos</a>
+                <a href="espace-membre.html" class="hover:text-accent transition">Espace membre</a>
+                <a href="index.html#contact" class="hover:text-accent transition">Contact</a>
+            </nav>
+            
+            <button class="md:hidden text-2xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary px-4 pb-4" id="mobile-menu">
+            <a href="index.html" class="block py-2 hover:text-accent">Accueil</a>
+            <a href="#" class="block py-2 hover:text-accent">Formations</a>
+            <a href="ebook.html" class="block py-2 hover:text-accent">Boutique</a>
+            <a href="#" class="block py-2 hover:text-accent">Blog</a>
+            <a href="index.html#about" class="block py-2 hover:text-accent">À propos</a>
+            <a href="espace-membre.html" class="block py-2 hover:text-accent">Espace membre</a>
+            <a href="index.html#contact" class="block py-2 hover:text-accent">Contact</a>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-md">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-primary text-secondary p-6 text-center">
+                    <h1 class="text-2xl font-bold">Connexion à l'Espace Membre</h1>
+                </div>
+                
+                <div class="p-6">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        
+                        <div>
+                            <label for="password" class="block mb-1">Mot de passe</label>
+                            <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="remember" class="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded">
+                                <label for="remember" class="ml-2 block text-sm">Se souvenir de moi</label>
+                            </div>
+                            
+                            <a href="#" class="text-sm text-accent hover:underline">Mot de passe oublié?</a>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent hover:bg-blue-800 text-white py-3 rounded-lg transition">Se connecter</button>
+                    </form>
+                    
+                    <div class="mt-6">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-2 bg-white text-gray-500">Ou</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-2 gap-3">
+                            <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                <i class="fab fa-google text-red-500 mt-1 mr-2"></i> Google
+                            </a>
+                            <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                <i class="fab fa-facebook-f text-blue-600 mt-1 mr-2"></i> Facebook
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-sm text-gray-600">Pas encore membre? <a href="#" class="text-accent hover:underline">Créer un compte</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-secondary py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="images/logo.png" alt="Lex&Struct Logo" class="h-8">
+                    <span class="text-lg font-bold">Lex&Struct</span>
+                </div>
+                
+                <div class="text-sm text-center md:text-right">
+                    <p>&copy; 2023 Lex&Struct. Tous droits réservés.</p>
+                    <p class="mt-1">Conçu avec passion par Gougna Mbengue.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Simple form validation for demo
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if(email && password) {
+                alert('Connexion réussie! En production, ceci redirigerait vers le tableau de bord.');
+                // window.location.href = 'dashboard.html';
+            } else {
+                alert('Veuillez remplir tous les champs.');
+            }
+        });
+    </script>
+</body>
+</html>
