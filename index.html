@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Droit - Lex&Struct</title>
-    <meta name="description" content="Formations en droit sur Lex&Struct. Cours complets, vidéos et ressources juridiques.">
+    <title>Lex&Struct - Formation en Droit et Génie Civil</title>
+    <meta name="description" content="Plateforme de formation en droit et génie civil. Solidité des structures, force du droit.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,7 +25,10 @@
         }
     </script>
     <style>
-        .course-card:hover {
+        .hero-overlay {
+            background-color: rgba(12, 35, 64, 0.7);
+        }
+        .content-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
@@ -41,13 +44,12 @@
             </div>
             
             <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-accent transition">Accueil</a>
                 <a href="#" class="hover:text-accent transition">Formations</a>
                 <a href="ebook.html" class="hover:text-accent transition">Boutique</a>
                 <a href="#" class="hover:text-accent transition">Blog</a>
-                <a href="index.html#about" class="hover:text-accent transition">À propos</a>
+                <a href="#about" class="hover:text-accent transition">À propos</a>
                 <a href="espace-membre.html" class="hover:text-accent transition">Espace membre</a>
-                <a href="index.html#contact" class="hover:text-accent transition">Contact</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
             </nav>
             
             <button class="md:hidden text-2xl" id="menu-toggle">
@@ -57,153 +59,186 @@
         
         <!-- Mobile menu -->
         <div class="md:hidden hidden bg-primary px-4 pb-4" id="mobile-menu">
-            <a href="index.html" class="block py-2 hover:text-accent">Accueil</a>
             <a href="#" class="block py-2 hover:text-accent">Formations</a>
             <a href="ebook.html" class="block py-2 hover:text-accent">Boutique</a>
             <a href="#" class="block py-2 hover:text-accent">Blog</a>
-            <a href="index.html#about" class="block py-2 hover:text-accent">À propos</a>
+            <a href="#about" class="block py-2 hover:text-accent">À propos</a>
             <a href="espace-membre.html" class="block py-2 hover:text-accent">Espace membre</a>
-            <a href="index.html#contact" class="block py-2 hover:text-accent">Contact</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="bg-primary text-secondary py-12 px-4">
-        <div class="container mx-auto text-center">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">Formations en Droit</h1>
-            <p class="text-xl max-w-2xl mx-auto">Approfondissez vos connaissances juridiques avec nos formations spécialisées.</p>
+    <!-- Hero Section -->
+    <section class="relative h-96 md:h-screen max-h-screen-60">
+        <div class="absolute inset-0 bg-[url('images/banner.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative h-full flex flex-col justify-center items-center text-center px-4">
+            <h1 class="text-3xl md:text-5xl font-bold text-secondary mb-4">Solidité des structures, force du droit.</h1>
+            <p class="text-xl md:text-2xl text-secondary max-w-2xl">Formez-vous en génie civil et droit depuis une seule plateforme dynamique et académique.</p>
+            <div class="mt-8 flex space-x-4">
+                <a href="genie-civil.html" class="bg-accent hover:bg-blue-800 text-white px-6 py-3 rounded-lg transition">Génie Civil</a>
+                <a href="droit.html" class="bg-secondary hover:bg-gray-200 text-primary px-6 py-3 rounded-lg transition">Droit</a>
+            </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section class="py-16 px-4">
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl font-bold text-center mb-12">À propos de Lex&Struct</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gougna Mbengue" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">Lex&Struct est une plateforme innovante créée par Gougna Mbengue, étudiant passionné en génie civil avec une forte affinité pour le droit.</p>
+                    <p class="text-lg mb-4">Notre mission est de fournir des formations de qualité dans ces deux domaines complémentaires, en combinant rigueur académique et approche pratique.</p>
+                    <p class="text-lg">Nous croyons que la maîtrise à la fois des aspects techniques et juridiques est essentielle pour les professionnels de demain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section class="py-16 bg-primary text-secondary px-4">
         <div class="container mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Course 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit Civil</h3>
-                        <p class="text-gray-600 mb-4">Fondamentaux du droit civil et des obligations.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">14 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit des Affaires</h3>
-                        <p class="text-gray-600 mb-4">Droit commercial, des sociétés et de la concurrence.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">16 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit Pénal</h3>
-                        <p class="text-gray-600 mb-4">Principes généraux et procédure pénale.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">15 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course 4 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit du Travail</h3>
-                        <p class="text-gray-600 mb-4">Relations individuelles et collectives de travail.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">12 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course 5 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit Administratif</h3>
-                        <p class="text-gray-600 mb-4">Organisation administrative et contentieux.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">13 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Course 6 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden course-card transition duration-300">
-                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Droit International</h3>
-                        <p class="text-gray-600 mb-4">Droit international public et privé.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-accent">17 000 FCFA</span>
-                            <a href="#" class="bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Formations</h2>
             
-            <!-- Video Section -->
-            <div class="mt-16">
-                <h2 class="text-2xl font-bold text-center mb-8">Vidéos de Formation</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe class="w-full h-64 md:h-80 rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h3 class="text-lg font-bold mt-2">Introduction au Droit</h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Génie Civil Card -->
+                <div class="bg-secondary text-primary rounded-lg overflow-hidden shadow-lg content-card transition duration-300">
+                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Génie Civil</h3>
+                        <p class="mb-4">Maîtrisez les concepts fondamentaux et avancés du génie civil avec nos cours complets.</p>
+                        <a href="genie-civil.html" class="inline-block bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Voir les cours</a>
                     </div>
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe class="w-full h-64 md:h-80 rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h3 class="text-lg font-bold mt-2">Méthodologie Juridique</h3>
+                </div>
+                
+                <!-- Droit Card -->
+                <div class="bg-secondary text-primary rounded-lg overflow-hidden shadow-lg content-card transition duration-300">
+                    <div class="h-48 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Droit</h3>
+                        <p class="mb-4">Approfondissez vos connaissances juridiques avec nos formations spécialisées en droit.</p>
+                        <a href="droit.html" class="inline-block bg-accent hover:bg-blue-800 text-white px-4 py-2 rounded transition">Voir les cours</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Payment Methods -->
+    <!-- Contenus Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Contenus</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center content-card transition duration-300">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">PDF Complets</h3>
+                    <p>Cours détaillés et fiches de synthèse téléchargeables.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center content-card transition duration-300">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Vidéos</h3>
+                    <p>Cours en vidéo et études de cas pratiques.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center content-card transition duration-300">
+                    <div class="text-4xl text-accent mb-4">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">E-books</h3>
+                    <p>Ouvrages spécialisés disponibles dans notre boutique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
     <section class="py-16 bg-primary text-secondary px-4">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-2xl font-bold text-center mb-8">Méthodes de Paiement</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-secondary text-primary p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-money-bill-wave mr-2 text-accent"></i> Wave
-                    </h3>
-                    <p class="mb-4">Effectuez votre paiement directement via Wave.</p>
-                    <button class="bg-accent hover:bg-blue-800 text-white px-6 py-2 rounded-lg transition">Payer avec Wave</button>
-                </div>
-                <div class="bg-secondary text-primary p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-mobile-alt mr-2 text-accent"></i> Orange Money
-                    </h3>
-                    <p class="mb-4">Effectuez votre paiement via Orange Money.</p>
-                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg transition">Payer avec Orange</button>
-                </div>
+            <h2 class="text-3xl font-bold text-center mb-12">Derniers Articles du Blog</h2>
+            <p class="text-center text-xl mb-8">(Articles à venir - Section en construction)</p>
+            <div class="flex justify-center">
+                <a href="#" class="bg-accent hover:bg-blue-800 text-white px-6 py-3 rounded-lg transition">Visiter le Blog</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-2xl bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold text-center mb-6">Abonnez-vous à notre newsletter</h2>
+            <form class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
+                <button type="submit" class="bg-accent hover:bg-blue-800 text-white px-6 py-2 rounded-lg transition">S'abonner</button>
+            </form>
+            <p class="text-sm text-gray-500 mt-2 text-center">Nous ne partagerons jamais votre email avec des tiers.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-secondary px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
             
-            <div class="mt-8 bg-secondary text-primary p-6 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">Envoyer une preuve de paiement</h3>
-                <p class="mb-4">Après paiement, envoyez-nous votre preuve via WhatsApp ou le formulaire ci-dessous.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/221771300685" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition flex items-center">
-                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                    </a>
-                    <button class="bg-accent hover:bg-blue-800 text-white px-6 py-2 rounded-lg transition">Formulaire</button>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Envoyez-nous un message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Nom</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-secondary text-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-secondary text-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-secondary text-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-accent hover:bg-blue-800 text-white px-6 py-2 rounded-lg transition">Envoyer</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Nos coordonnées</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-user mt-1 text-accent"></i>
+                            <p>Gougna Mbengue</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-envelope mt-1 text-accent"></i>
+                            <p>mbenguegougn10@gmail.com</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-phone mt-1 text-accent"></i>
+                            <p>+221 77 130 06 85</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <p>Projet : Lex&Struct – Droit & Génie Civil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-accent transition"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-2xl hover:text-accent transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-2xl hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-2xl hover:text-accent transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
