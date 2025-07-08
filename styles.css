@@ -1,0 +1,15 @@
+/* Vous pouvez ajouter des styles CSS personnalisés ici si nécessaire */
+/* La plupart des styles sont gérés par Tailwind */
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* Animation pour les boutons */
+.btn-animate {
+    transition: all 0.3s ease;
+}
+
+.btn-animate:hover {
+    transform: translateY(-2px);
+}
